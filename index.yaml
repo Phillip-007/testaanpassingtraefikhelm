@@ -29,11 +29,12 @@ entries:
     name: traefik
     sources:
     - https://github.com/traefik/traefik
-    - https://github.com/Phillip-007/testaanpassingtraefikhelm/tree/main/traefik-helm-chart
-    #https://github.com/traefik/traefik-helm-chart
+    - https://github.com/traefik/traefik-helm-chart
+    # https://github.com/Phillip-007/testaanpassingtraefikhelm/tree/main/traefik-helm-chart
     type: application
     urls:
-    - https://traefik.github.io/charts/traefik/traefik-32.1.0.tgz
+    - https://github.com/Phillip-007/testaanpassingtraefikhelm/blob/main/zipfiles/traefik-32.1.0.tgz
+    # https://traefik.github.io/charts/traefik/traefik-32.1.0.tgz
     version: 32.1.0
 traefik-crds:
   - annotations:
