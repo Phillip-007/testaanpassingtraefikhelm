@@ -1,0 +1,3108 @@
+# used as a source: https://helm.traefik.io/traefik/index.yaml
+
+apiVersion: v1
+entries:
+  maesh:
+  - apiVersion: v2
+    appVersion: v1.3.2
+    created: "2022-10-04T10:34:39.831203057Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Maesh - Simpler Service Mesh
+    digest: 83f50f587025e38db81a56f0708fbc3d4e741d08a79b45305d6e310fa420e809
+    home: https://mae.sh/
+    icon: https://raw.githubusercontent.com/containous/maesh/v1.2/docs/content/assets/img/maesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@containo.us
+      name: mmatur
+    - email: manuel@containo.us
+      name: santode
+    - email: harold@containo.us
+      name: jspdown
+    - email: kevin@containo.us
+      name: kevinpollet
+    name: maesh
+    sources:
+    - https://github.com/containous/maesh/
+    urls:
+    - https://traefik.github.io/charts/mesh/maesh-2.1.2.tgz
+    version: 2.1.2
+
+    appVersion: v0.4.0
+    created: "2022-10-04T10:34:39.814252395Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.0.6
+    description: Maesh - Simpler Service Mesh
+    digest: 12d970fe9a44d2d732b64cc0aa0065f443ee3ed895189629dcb4568552e9054f
+    home: https://containo.us/
+    icon: https://avatars0.githubusercontent.com/u/16349663?s=200&v=4
+    keywords:
+    - traefik
+    - mesh
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel@containo.us
+      name: dtomcej
+    - email: michael@containo.us
+      name: mmatur
+    name: maesh
+    urls:
+    - https://traefik.github.io/charts/mesh/maesh-0.0.5.tgz
+    version: 0.0.5
+  traefik:
+  - annotations:
+      artifacthub.io/changes: "- \"fix: :bug: set disableIngressClassLookup until
+        3.1.4\"\n- \"feat(deps): update traefik docker tag to v3.1.5\"\n- \"feat(Traefik
+        Proxy): update rbac following v3.2 migration guide\"\n- \"chore(release):
+        \U0001F680 publish v32.1.0\"\n"
+    apiVersion: v2
+    appVersion: v3.1.5
+    created: "2024-10-04T09:55:34.829684667Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 1f06f7a0ee02427f4c35b5021d7ddbaeddb780b772cae411a0a84abf17733387
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://dev.azure.com/wigo4it/Cloud%20Foundation/_git/traefik-helm-chart?path=/traefik
+    - https://dev.azure.com/wigo4it/Cloud%20Foundation/_git/traefik-helm-chart?path=/
+    type: application
+    urls:
+    - https://dev.azure.com/wigo4it/Cloud%20Foundation/_git/traefik-helm-chart?path=/charts/traefik-32.1.0.tar.gz
+    version: 32.1.0
+  traefik-crds:
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat(Traefik Hub): add OAS validateRequestMethodAndPath - CRDs update"
+        - "chore(release): publish v34.1.0 and CRDs v1.2.0"
+    apiVersion: v2
+    created: "2025-01-15T13:39:18.729991166Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: fc612c5b3311f88f95c954306c053f31cb2f079714539a8ebed60f129faae669
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik-crds
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-crds/traefik-crds-1.2.0.tgz
+    version: 1.2.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat(CRDs): update CRDs for Traefik Proxy v3.3.x"
+        - "chore(release): publish CRDs v1.1.0"
+    apiVersion: v2
+    created: "2025-01-13T14:25:31.148828138Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: b8cf7da6634f5b77dac8810f5abc24a30f57d942f8d9172bbef9dc2e4bfcb88d
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik-crds
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-crds/traefik-crds-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    created: "2025-01-10T10:55:48.397863936Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 430cd03a4d754f0b074c8a3d9a4d7620d7ddb27b0e457d9ce101b2ef4863c4b7
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik-crds
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-crds/traefik-crds-1.0.0.tgz
+    version: 1.0.0
+  traefik-hub:
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: add option to update image pull policy"
+        - "feat: traefik v3 upgrade"
+        - "feat: add ingressroute for dashboard options"
+        - "feat: remove sidecar mode"
+        - "chore: update CRDs to v1.0.0"
+    apiVersion: v2
+    appVersion: v2.10.0
+    created: "2024-04-19T09:05:29.242736531Z"
+    description: Traefik Hub Ingress Controller
+    digest: 8fea934fa9dd9937d4f91f9dcf2fd6189aabafe827367be2c8b993f8356390f8
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-5.0.0-rc.1.tgz
+    version: 5.0.0-rc.1
+  - annotations:
+      artifacthub.io/changes: |
+        - "docs: add missing helm repo on README"
+        - "feat!: LoadBalancer Service by default"
+        - "doc: install notes"
+        - "fix: Service annotations indent"
+    apiVersion: v2
+    appVersion: v2.11.0
+    created: "2024-03-15T09:16:43.5913859Z"
+    description: Traefik Hub Ingress Controller
+    digest: c7457df01289d771779bee70248e704cdac62bb0eb1941ab6b3a424bc00f3e6e
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-4.2.0.tgz
+    version: 4.2.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "docs: add missing helm repo on README"
+        - "feat!: LoadBalancer Service by default"
+        - "doc: install notes"
+        - "fix: Service annotations indent"
+    apiVersion: v2
+    appVersion: v2.10.0
+    created: "2024-03-05T08:32:47.544663255Z"
+    description: Traefik Hub Ingress Controller
+    digest: fe322913a0a62ee04534fd32fcc20cab9541ba7c3f00c56b3d1d13fd5d8d9c62
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-4.1.0.tgz
+    version: 4.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat!: LoadBalancer Service by default"
+        - "fix: Service annotations indent"
+        - "docs: add missing helm repo on README"
+        - "docs: install notes"
+    apiVersion: v2
+    appVersion: v2.9.0
+    created: "2024-02-23T09:30:52.547860462Z"
+    description: Traefik Hub Ingress Controller
+    digest: bddf7300d7e35e733be694f3b21ac8f97841c7e03aeb14442c2f9e9981ba44fa
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-4.0.0.tgz
+    version: 4.0.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix!: use release name for resources name"
+        - "fix!: IngressClass should not be created by default"
+        - "fix: remove unnecessary rbac"
+        - "chore: upgrade traefik-hub version"
+        - "chore: update CRDs"
+        - "chore: remove unnecessary env var"
+    apiVersion: v2
+    appVersion: v2.8.0
+    created: "2024-01-12T13:29:18.406015692Z"
+    description: Traefik Hub Ingress Controller
+    digest: 9736e5268614a21567b7473ee7f32943c82ca2f2d34468e240a9bd843844b096
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-3.0.0.tgz
+    version: 3.0.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: upgrade traefik hub to version v2.6.0"
+        - "feat: customizable Service ports"
+    apiVersion: v2
+    appVersion: v2.8.0
+    created: "2024-01-10T13:56:59.814163707Z"
+    description: Traefik Hub Ingress Controller
+    digest: de4b495fb64533a633a591971d014f10e7eb1074098062170582d71fc9427ea9
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.10.0.tgz
+    version: 2.10.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: upgrade traefik hub to version v2.6.0"
+        - "feat: customizable Service ports"
+    apiVersion: v2
+    appVersion: v2.7.0
+    created: "2023-12-11T14:58:53.367871909Z"
+    description: Traefik Hub Ingress Controller
+    digest: 12ab3c2a64701f6d4b07ef2477154b3291075ae43e1549be71242a5ba3813c8a
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.9.0.tgz
+    version: 2.9.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: upgrade traefik hub to version v2.6.0"
+        - "feat: customizable Service ports"
+    apiVersion: v2
+    appVersion: v2.6.0
+    created: "2023-12-06T15:42:50.531658876Z"
+    description: Traefik Hub Ingress Controller
+    digest: be968c91910e3eda24c81b9d0c9adaa37d380601cdc5affb3917972d02fdc8b9
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.24.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.8.0.tgz
+    version: 2.8.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: upgrade traefik hub to version v2.6.0"
+        - "feat: customizable Service ports"
+    apiVersion: v2
+    appVersion: v2.6.0
+    created: "2023-11-21T13:24:59.31730217Z"
+    description: Traefik Hub Ingress Controller
+    digest: 759318917e66ec791d548a223da01ba66e1d82a6d7bb317ae9ac6d997caf4164
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.26.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.7.0.tgz
+    version: 2.7.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: upgrade traefik hub to version v2.4.2"
+    apiVersion: v2
+    appVersion: v2.5.0
+    created: "2023-11-09T16:20:22.722456718Z"
+    description: Traefik Hub Ingress Controller
+    digest: 42b8762b48263bfdd01931ab4530600a94f19571501aa1d79250d56eb5f744bb
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.6.0.tgz
+    version: 2.6.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: upgrade traefik hub to version v2.4.2"
+    apiVersion: v2
+    appVersion: v2.4.2
+    created: "2023-10-30T16:33:07.625580231Z"
+    description: Traefik Hub Ingress Controller
+    digest: 67186e0652cf4aefad18b4456f6c149a61a06fa52166ba48068aa3d90089b4c5
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.5.1.tgz
+    version: 2.5.1
+  - annotations:
+      artifacthub.io/changes: |
+        - "chore: upgrade traefik-hub version"
+        - "Feat allow to set imagePullSecrets"
+    apiVersion: v2
+    appVersion: v2.4.1
+    created: "2023-10-30T09:39:17.187338151Z"
+    description: Traefik Hub Ingress Controller
+    digest: a2e8cfad63fb684362264e6305af9cb19ffa0ae69ae4381883893c20ce644d33
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.5.0.tgz
+    version: 2.5.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix: exit when leader elector stopped"
+    apiVersion: v2
+    appVersion: v2.4.0
+    created: "2023-10-24T14:21:06.418514601Z"
+    description: Traefik Hub Ingress Controller
+    digest: 3cd39ea9875139bc5094a8f02e933cc0a1325f0aa7e1527d477dcdd46d407978
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.4.0.tgz
+    version: 2.4.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix: exit when leader elector stopped"
+    apiVersion: v2
+    appVersion: v2.3.0
+    created: "2023-10-12T14:04:54.401352894Z"
+    description: Traefik Hub Ingress Controller
+    digest: 5f29bf898dd301ebbe51ff7769a44ad16b52d93b44ebf1cfe1d52d19085ef1f9
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.3.0.tgz
+    version: 2.3.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix: exit when leader elector stopped"
+    apiVersion: v2
+    appVersion: v2.2.1
+    created: "2023-09-15T07:42:52.815914736Z"
+    description: Traefik Hub Ingress Controller
+    digest: dfce8c6895671b504bef3f38fa1b9846dbe343c0df9b3f7b2b3493f54c7fb071
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.2.1.tgz
+    version: 2.2.1
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: API Versioning"
+    apiVersion: v2
+    appVersion: v2.2.0
+    created: "2023-09-04T13:08:55.084108826Z"
+    description: Traefik Hub Ingress Controller
+    digest: f72b64f7ba02ca102b79c97821f3b0a73c51ccd1655e3e44d6ce3f6a7a8321e8
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.2.0.tgz
+    version: 2.2.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: API Versioning"
+    apiVersion: v2
+    appVersion: v2.1.0
+    created: "2023-08-07T13:56:59.340855534Z"
+    description: Traefik Hub Ingress Controller
+    digest: e2cc37ba9dd5b093bd588904477e49c5e8389a01a422fa31c188e1c6fcaf7f97
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.1.0.tgz
+    version: 2.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix: certificate error on mutatingwebhook"
+    apiVersion: v2
+    appVersion: v2.1.0
+    created: "2023-08-04T08:06:50.775787861Z"
+    description: Traefik Hub Ingress Controller
+    digest: fa477c9e81ed21dc9ec39140164a78b605a2229a804d68ee4f461a0741f1a46e
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-2.0.0.tgz
+    version: 2.0.0
+  - annotations:
+      artifacthub.io/changes: "- \"release: \U0001F680 publish v1.0.0\"\n"
+    apiVersion: v2
+    appVersion: v2.1.0
+    created: "2023-08-01T15:13:05.027677091Z"
+    description: Traefik Hub Ingress Controller
+    digest: 08e9b849f795ba0dfa2494fac85e34d23984718ffff67c1cb80c4efbd2a89150
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-1.0.6.tgz
+    version: 1.0.6
+  - annotations:
+      artifacthub.io/changes: "- \"release: \U0001F680 publish v1.0.0\"\n"
+    apiVersion: v2
+    appVersion: v2.1.0
+    created: "2023-07-26T16:44:54.49114309Z"
+    description: Traefik Hub Ingress Controller
+    digest: 1719b8a20534e562ad5b349273937dde6c39ef78cd2ef8bba231824c98dafa6b
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-1.0.5.tgz
+    version: 1.0.5
+  - annotations:
+      artifacthub.io/changes: "- \"release: \U0001F680 publish v1.0.0\"\n"
+    apiVersion: v2
+    appVersion: v2.1.0
+    created: "2023-07-26T16:32:55.889802473Z"
+    description: Traefik Hub Ingress Controller
+    digest: f00f56678e27b012d874e1148741f555a2f268fc4636d61776d5abbce885f5ce
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-1.0.4.tgz
+    version: 1.0.4
+  - annotations:
+      artifacthub.io/changes: "- \"release: \U0001F680 publish v1.0.0\"\n"
+    apiVersion: v2
+    appVersion: v2.1.0
+    created: "2023-07-26T16:16:59.992126924Z"
+    description: Traefik Hub Ingress Controller
+    digest: 67c907e700f0fbe548fefd1658614655a0b249ecfc80df305c3fdeed035e9004
+    home: https://traefik.io/traefik-hub
+    icon: https://doc.traefik.io/traefik-hub/assets/images/logos-traefik-hub-horizontal.svg
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    - api
+    - apimanagement
+    kubeVersion: '>=1.16.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: michael.matur@traefik.io
+      name: mmatur
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    name: traefik-hub
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-hub/traefik-hub-1.0.3.tgz
+    version: 1.0.3
+  traefik-mesh:
+  - apiVersion: v2
+    appVersion: v1.4.8
+    created: "2022-11-16T15:46:58.811448228Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.1.0
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.2.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 6fce02e3374b6b6ac081fa4d9bc1f5d562081f71b38397f89feb7d0022e4f73d
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-4.1.1.tgz
+    version: 4.1.1
+  - apiVersion: v2
+    appVersion: v1.4.8
+    created: "2022-11-08T15:44:53.44181681Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.1.0
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.2.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 1271921c45e7c7ca2c105cd7ad00e471bad70b6eb05567061e6f684445eb4eed
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-4.1.0.tgz
+    version: 4.1.0
+  - apiVersion: v2
+    appVersion: v1.4.8
+    created: "2022-10-04T10:34:39.860897592Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 8ba251c7a6a0f72c400e24cbe86e59e02d1caf97c778c93f15fb66d711ab2338
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-4.0.4.tgz
+    version: 4.0.4
+  - apiVersion: v2
+    appVersion: v1.4.7
+    created: "2022-10-04T10:34:39.859105269Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: c57049f44922fd1adf7233deb3718736e2996ad81fd7a98929412a39b31a473a
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-4.0.3.tgz
+    version: 4.0.3
+  - apiVersion: v2
+    appVersion: v1.4.5
+    created: "2022-10-04T10:34:39.857484058Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: f3be8b8d67ba54f7a18d15791be44a155103e99e2af6b2f0dedd27137f1bb8c9
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-4.0.2.tgz
+    version: 4.0.2
+  - apiVersion: v2
+    appVersion: v1.4.5
+    created: "2022-10-04T10:34:39.855140997Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: f4698f127a2b116fe296ed2d83b5c4d6984f995976d709f3a7f8842db8f1a2a9
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-4.0.1.tgz
+    version: 4.0.1
+  - apiVersion: v2
+    appVersion: v1.4.4
+    created: "2022-10-04T10:34:39.852449313Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: ab97a5ea83ddd0d4c73bea7147c450f673887af867e67b37b0f844b4aa7f5147
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-4.0.0.tgz
+    version: 4.0.0
+  - apiVersion: v2
+    appVersion: v1.4.4
+    created: "2022-10-04T10:34:39.850532281Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 4e103d63dadb864b01b176dbbec9213dddd3ecf0515b845c0b7b93c9fdad1d17
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.9.tgz
+    version: 3.0.9
+  - apiVersion: v2
+    appVersion: v1.4.1
+    created: "2022-10-04T10:34:39.848722057Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 7f5e9e6c6b07d43e081e01adf40ab42df496c855f911b48aa98e41b01c417261
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.8.tgz
+    version: 3.0.8
+  - apiVersion: v2
+    appVersion: v1.4.1
+    created: "2022-10-04T10:34:39.846819427Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: e57821ebaae6003672c8b33703117df47922a0500776f37e13f26919969982b7
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    - https://github.com/traefik/mesh-helm-chart/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.7.tgz
+    version: 3.0.7
+  - apiVersion: v2
+    appVersion: v1.4.1
+    created: "2022-10-04T10:34:39.844891195Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 0a1ae020b0770f5219f638ddc979c86fb8f48b0df32b1a260a4b581e7eea1378
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.6.tgz
+    version: 3.0.6
+  - apiVersion: v2
+    appVersion: v1.4.0
+    created: "2022-10-04T10:34:39.842977864Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: d2c2f62c079019bf8d860e548fff72e65b8887df8f12f337d892f39b7d19c3ed
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.5.tgz
+    version: 3.0.5
+  - apiVersion: v2
+    appVersion: v1.4.0
+    created: "2022-10-04T10:34:39.8405916Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 13d687122f75739dad951f27babd9c631fb5b545649231a95ffca341906558d3
+    home: https://traefik.io/traefik-mesh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.4.tgz
+    version: 3.0.4
+  - apiVersion: v2
+    appVersion: v1.4.0
+    created: "2022-10-04T10:34:39.838226338Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 9b4ffb61240d0bef8ad23b786e27c2bb1b9daa201a64bdd20888f5b4e18ca591
+    home: https://mae.sh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@traefik.io
+      name: mmatur
+    - email: manuel@traefik.io
+      name: santode
+    - email: harold@traefik.io
+      name: jspdown
+    - email: kevin@traefik.io
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.3.tgz
+    version: 3.0.3
+  - apiVersion: v2
+    appVersion: v1.4.0-rc1
+    created: "2022-10-04T10:34:39.836400613Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: e5d3ef5a7581634eb21172100193da1c2a0bc6deb01902be3d71f7a934f6c0bf
+    home: https://mae.sh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@containo.us
+      name: mmatur
+    - email: manuel@containo.us
+      name: santode
+    - email: harold@containo.us
+      name: jspdown
+    - email: kevin@containo.us
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.2.tgz
+    version: 3.0.2
+  - apiVersion: v2
+    appVersion: v1.4.0-rc1
+    created: "2022-10-04T10:34:39.834511183Z"
+    dependencies:
+    - condition: tracing.deploy
+      name: tracing
+      repository: ""
+      version: 0.0.3
+    - condition: metrics.deploy
+      name: metrics
+      repository: ""
+      version: 0.1.0
+    description: Traefik Mesh - Simpler Service Mesh
+    digest: 74514bafa6c52619d4100115e8f5e067d065535b9bbe42e77a90d56d316188dd
+    home: https://mae.sh/
+    icon: https://raw.githubusercontent.com/traefik/mesh/master/docs/content/assets/img/traefik-mesh.png
+    keywords:
+    - traefik
+    - mesh
+    - smi
+    maintainers:
+    - email: emile@vauge.com
+      name: emilevauge
+    - email: daniel.tomcej@gmail.com
+      name: dtomcej
+    - email: michael@containo.us
+      name: mmatur
+    - email: manuel@containo.us
+      name: santode
+    - email: harold@containo.us
+      name: jspdown
+    - email: kevin@containo.us
+      name: kevinpollet
+    name: traefik-mesh
+    sources:
+    - https://github.com/traefik/mesh/
+    type: application
+    urls:
+    - https://traefik.github.io/charts/mesh/traefik-mesh-3.0.1.tgz
+    version: 3.0.1
+  traefikee:
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: :sparkles: make proxy wait for plugin registry"
+        - "chore(release): publish v4.2.0"
+        - "chore(deps): update docker.io/traefik/traefikee docker tag to v2.12.1"
+    apiVersion: v2
+    appVersion: v2.12.1
+    created: "2024-12-16T09:18:43.553261832Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: e7c5c6bc5a893a4ab80576502bc0a2330ec7e511b37e277db7cb1c7cbb49f955
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.2.0.tgz
+    version: 4.2.0
+  - annotations:
+      artifacthub.io/changes: "- \"feat: âœ¨ update CRDs to v2.12.0\"\n- \"chore(release):
+        \U0001F680 publish v4.1.0\"\n- \"chore(deps): update docker.io/traefik/traefikee
+        docker tag to v2.12.0\"\n"
+    apiVersion: v2
+    appVersion: v2.12.0
+    created: "2024-11-29T09:08:40.384265068Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 4f092097b23b284ca22f3ba1b4a8aac466b3c554f79d7f5c0a8c3d291ab1eda3
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.1.0.tgz
+    version: 4.1.0
+  - annotations:
+      artifacthub.io/changes: "- \"chore(release): \U0001F680 publish v4.0.6\"\n-
+        \"chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.8 (#163)\"\n"
+    apiVersion: v2
+    appVersion: v2.11.8
+    created: "2024-10-22T08:18:46.619531841Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 52bc7dd28bfe63a9b097a09462d40d29a60e40d2e3ab71f9eac2f0f2ab836dd3
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.0.6.tgz
+    version: 4.0.6
+  - annotations:
+      artifacthub.io/changes: "- \"chore(release): \U0001F680 publish v4.0.5\"\n-
+        \"chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.7\"\n"
+    apiVersion: v2
+    appVersion: v2.11.7
+    created: "2024-10-04T15:40:42.350804139Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 5f8c3c5672281d7ee38417b20f2da46db5fc27ab1f94e4d62eac823d375e487f
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.0.5.tgz
+    version: 4.0.5
+  - annotations:
+      artifacthub.io/changes: "- \"chore(release): \U0001F680 publish v4.0.4\"\n-
+        \"chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.6\"\n-
+        \"chore(deps): update docker.io/busybox docker tag to v1.37.0\"\n"
+    apiVersion: v2
+    appVersion: v2.11.6
+    created: "2024-10-02T09:56:43.631419974Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 9c792cb2594657ea405962047ba96eac6b1277e68062bdfadd76b35b2baaa7a2
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.0.4.tgz
+    version: 4.0.4
+  - annotations:
+      artifacthub.io/changes: "- \"chore(release): \U0001F680 publish v4.0.3\"\n-
+        \"chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.5\"\n"
+    apiVersion: v2
+    appVersion: v2.11.5
+    created: "2024-09-18T14:02:48.402432876Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: d0c3c3a8ee45666553f909f7bd46ce7fade033dffaee5636ab1b5410020be435
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.0.3.tgz
+    version: 4.0.3
+  - annotations:
+      artifacthub.io/changes: "- \"chore(release): \U0001F680 publish v4.0.2\"\n-
+        \"chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.4\"\n"
+    apiVersion: v2
+    appVersion: v2.11.4
+    created: "2024-08-08T12:56:39.441072086Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: e2619eab94792965d18d09993053fadea2f74a4b160d6ea9a39040e6a0015694
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.0.2.tgz
+    version: 4.0.2
+  - annotations:
+      artifacthub.io/changes: "- \"chore(release): \U0001F680 publish v4.0.1\"\n-
+        \"chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.3\"\n"
+    apiVersion: v2
+    appVersion: v2.11.3
+    created: "2024-07-11T09:46:40.84572593Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 5a17c4ba4318f1a5644a0279683dbdf5053cd694f5e1c145e8276b5a2457be9c
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.0.1.tgz
+    version: 4.0.1
+  - annotations:
+      artifacthub.io/changes: "- \"fix: \U0001F41B apply disableChown also on proxy\"\n-
+        \"feat(security)!: âœ¨ \U0001F512ï¸ capabilities are droppped by default and
+        can be set if needed\"\n- \"chore(release): \U0001F680 publish v4.0.0\"\n-
+        \"chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.2\"\n"
+    apiVersion: v2
+    appVersion: v2.11.2
+    created: "2024-06-03T08:00:48.374614252Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 7a24d55de13237bba23b9e00ee76a67baf6fd59bf5fd9f8a60dbddb16676617a
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-4.0.0.tgz
+    version: 4.0.0
+  - annotations:
+      artifacthub.io/changes: "- \"chore(release): \U0001F680 publish v3.4.1\"\n-
+        \"chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.1\"\n-
+        \"chore: improve, lint and doc release process\"\n"
+    apiVersion: v2
+    appVersion: v2.11.1
+    created: "2024-04-26T09:10:48.962991493Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 5843db0ba288ef8b8ab7205db3ec1fa265acb4516466bdb6f7de032ebfd2909d
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.4.1.tgz
+    version: 3.4.1
+  - annotations:
+      artifacthub.io/changes: |
+        - "chore(release): publish v3.3.2"
+        - "chore(deps): update docker.io/traefik/traefikee docker tag to v2.11.0"
+    apiVersion: v2
+    appVersion: v2.11.0
+    created: "2024-03-07T09:02:46.126099132Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 53c93f933f23f6457ce70a9c029c399b48a98805dca4e09c501c62e7c8780543
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.4.0.tgz
+    version: 3.4.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "chore(release): publish v3.3.1"
+        - "chore(deps): update docker.io/traefik/traefikee docker tag to v2.10.9"
+    apiVersion: v2
+    appVersion: v2.10.9
+    created: "2024-02-28T10:38:41.454712252Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: d7d06195d0c944fc84517a69179659f39e23ff39dbc7e32d31cdfd8f7186577d
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.23.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.3.2.tgz
+    version: 3.3.2
+  - annotations:
+      artifacthub.io/changes: |
+        - "chore(release): publish v3.3.1"
+        - "chore(deps): update docker.io/traefik/traefikee docker tag to v2.10.9"
+    apiVersion: v2
+    appVersion: v2.10.9
+    created: "2024-02-15T15:04:51.033871119Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 9fac07d17dbdd1359e04c3fd8b5ffc069e4228e6c176c8fb433dc60c7ef773ba
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.26.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.3.1.tgz
+    version: 3.3.1
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat: dashboard ingressroute"
+        - "feat: add missing Service spec fields"
+        - "feat: TLSOption"
+        - "chore(release): publish v3.3.0"
+    apiVersion: v2
+    appVersion: v2.10.8
+    created: "2024-02-12T08:12:48.670448044Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 27d5667ae92d6276741e9f5508520acd6eddfdfb48ea4bfa275db34a97dc7188
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.26.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.3.0.tgz
+    version: 3.3.0
+  - annotations:
+      artifacthub.io/changes: "- \"feat: \U0001F691ï¸ disable chown on EFS volumes
+        (#125)\"\n- \"feat: \U0001F680 release chart v3.2.0\"\n- \"chore(deps): update
+        docker.io/traefik/traefikee docker tag to v2.10.8 (#124)\"\n"
+    apiVersion: v2
+    appVersion: v2.10.8
+    created: "2024-01-11T13:28:10.591956481Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: aa76582f88e4772b4e7bec61f5a6f743b7f596aa57f0fb7bd8afd856698d5ec9
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.26.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.2.0.tgz
+    version: 3.2.0
+  - annotations:
+      artifacthub.io/changes: "- \"fix: use cluster name in label selector of service
+        controller\"\n- \"fix: enforce kube version requirements\"\n- \"feat: \U0001F527
+        support storageClassName\"\n- \"feat: additional proxy deployment\"\n- \"chore(release):
+        publish v3.1.0\"\n"
+    apiVersion: v2
+    appVersion: v2.10.7
+    created: "2024-01-10T10:20:56.454529562Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: ccc18076a26e95239b8dc0b4e77cb283a729294425ba84c846c27794fad8aea2
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.26.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.1.0.tgz
+    version: 3.1.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "chore: release v3.0.2 with Traefik Enterprise v2.10.7 and ingressClass"
+        - "chore(deps): update docker.io/traefik/traefikee docker tag to v2.10.7"
+        - "add Ingressclass"
+    apiVersion: v2
+    appVersion: v2.10.7
+    created: "2023-12-22T08:02:15.501101775Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 274cb743caee188ad1583e4c45e822945cd212b3fd285fb150c9d3b8bc6f44a4
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.0.2.tgz
+    version: 3.0.2
+  - annotations:
+      artifacthub.io/changes: |
+        - "chore: release v3.0.1 with Traefik Enterprise v2.10.6"
+    apiVersion: v2
+    appVersion: v2.10.6
+    created: "2023-12-06T08:18:53.926914778Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 60c15e026eb2015af2b295dcec31c8357fe12a9335b54eb2b7d4a6edfa45ca97
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.0.1.tgz
+    version: 3.0.1
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix: :see_no_evil: allow user to run proxy on priviledged ports"
+        - "fix: :boom: change default traefik port and make it configurable"
+        - "feat: :rocket: release 3.0.0"
+        - "feat: :card_file_box: configmap superseeds inline for staticConfig"
+    apiVersion: v2
+    appVersion: v2.10.5
+    created: "2023-11-23T08:28:49.786474974Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: eb521e73fd75b34bcb9b69270ba545f9413338006fd737ff5500286cca74e964
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-3.0.0.tgz
+    version: 3.0.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "fix: probes and ports on secured deployment"
+        - "fix: don't set plugin registry CLI when it's disabled"
+        - "feat: provide default HA values"
+        - "feat: inline static configuration"
+        - "feat: improve security on controller & registry"
+        - "feat: improve security defaults on proxy"
+        - "feat: allow to deploy without registry"
+        - "feat: add support for topology spread constraints on the controller"
+        - "feat: add optional hpa for proxy"
+        - "feat: :boom: rename image.name and image.initContainer"
+        - "feat: :boom: add readiness and liveness on all pods"
+        - "docs: add missing changelog entry for last release"
+        - "chore(release): publish v2.0.0"
+        - "chore(deps): update docker.io/traefik/traefikee docker tag to v2.10.5"
+        - "chore(deps): update docker.io/helmunittest/helm-unittest docker tag to v3.12.3"
+        - "chore(deps): update docker.io/busybox docker tag to v1.36.1"
+    apiVersion: v2
+    appVersion: v2.10.5
+    created: "2023-10-25T13:41:05.843304853Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 6abc9f8f9f7df6e54abc14c69c074fe12c94f8bd8a12e0430fe5db8e9e9cd9e4
+    home: https://traefik.io/traefik-enterprise/
+    icon: https://doc.traefik.io/traefik-enterprise/assets/images/logo-traefik-enterprise-logo.svg
+    keywords:
+    - traefikee
+    - traefik-enterprise
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: darkweaver87
+    - name: mloiseleur
+    - name: mmatur
+    - name: NEwa-05
+    - name: sdelicata
+    - name: kevinpollet
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-2.0.0.tgz
+    version: 2.0.0
+  - apiVersion: v2
+    appVersion: v2.10.4
+    created: "2023-08-23T14:10:56.518498788Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 212644f046936ca87d421347e91d466837132f80d2893869874a8fcf3a79f695
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.15.0.tgz
+    version: 1.15.0
+  - apiVersion: v2
+    appVersion: v2.10.4
+    created: "2023-08-03T15:38:55.225033714Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 18f4baa3eefd0365892dfd3cc7bd17b437e74835d06e56eedce768c01994491b
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.14.2.tgz
+    version: 1.14.2
+  - apiVersion: v2
+    appVersion: v2.10.2
+    created: "2023-06-22T09:42:48.646755377Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 644a3e392e3cefd8b2de4fcc372e7f0b48e5148c4e16d1f7505197f30b100acd
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.14.1.tgz
+    version: 1.14.1
+  - apiVersion: v2
+    appVersion: v2.10.1
+    created: "2023-06-19T12:24:57.717596134Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: ecc38236b2c1d96ca7773ce0cace6535f59c383e0c09ea4077928c269c3a9f58
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.14.0.tgz
+    version: 1.14.0
+  - apiVersion: v2
+    appVersion: v2.10.1
+    created: "2023-05-25T08:54:57.055794611Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: e5d6a49009e1f1b0c7febb5d296d2a8b9265e90e6865e7efe6f53605aec8bbbd
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.13.0.tgz
+    version: 1.13.0
+  - apiVersion: v2
+    appVersion: v2.10.1
+    created: "2023-05-02T15:38:56.676477899Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: d64a726750c56d2a9df34ce4584531d052491f9e2aafb5f4646fbe2ad5089bab
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.12.0.tgz
+    version: 1.12.0
+  - apiVersion: v2
+    appVersion: v2.10.1
+    created: "2023-04-28T13:26:57.755783345Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 5bcf6e472ef8904b9ac17918ad2658306a75d5de41f7d3881f39c136aa4a2e95
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.11.0.tgz
+    version: 1.11.0
+  - apiVersion: v2
+    appVersion: v2.9.2
+    created: "2023-04-27T09:01:00.297649731Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 40644ff43b49f524e8686adbed8f9a4a0b62e010266eeeced42b73eee2f19540
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.10.0.tgz
+    version: 1.10.0
+  - apiVersion: v2
+    appVersion: v2.9.2
+    created: "2023-04-12T14:40:55.220283503Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 8076b269f863b9b052a674ccc69ab2ad04d433c835d7896e33fb1b4e4b937d80
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.9.1.tgz
+    version: 1.9.1
+  - apiVersion: v2
+    appVersion: v2.9.1
+    created: "2023-04-12T09:18:56.561939081Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 1d531e4000ae87b915eea09554f9e4513bcf9649c96dbf20e0a96ecb507e0f7e
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.9.0.tgz
+    version: 1.9.0
+  - apiVersion: v2
+    appVersion: v2.9.1
+    created: "2023-04-03T07:31:00.882184342Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 34dd1aed6b152ea1b5bf65ff63787de9a53bb7e1178c7a9fcaa4eb653550695b
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.8.0.tgz
+    version: 1.8.0
+  - apiVersion: v2
+    appVersion: v2.9.1
+    created: "2023-01-23T09:20:57.982300629Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 190ea19370d38932316e93f2775e4c94d0e23bc0b1d45ac614c2c2a103f8c713
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.7.0.tgz
+    version: 1.7.0
+  - apiVersion: v2
+    appVersion: v2.9.1
+    created: "2022-12-15T10:32:56.15108489Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: a9753bd439d97b708079cb7c34692e37466e32b622545e700bd271b02c4a1a56
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.6.1.tgz
+    version: 1.6.1
+  - apiVersion: v2
+    appVersion: v2.9.0
+    created: "2022-11-29T07:58:59.824233423Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 9257be89710d9d59f860f4a8ba94e85292a8dc8b19bff4038978b08ff50561fb
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.6.0.tgz
+    version: 1.6.0
+  - apiVersion: v2
+    appVersion: v2.9.0
+    created: "2022-11-28T16:19:16.952051341Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 08eaa9ac269924957e3637bcd579f2545d62d3b956677cf872444bec3d465503
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.5.0.tgz
+    version: 1.5.0
+  - apiVersion: v2
+    appVersion: v2.8.4
+    created: "2022-11-14T13:24:56.187581184Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: f2322c1b5296c8b9f9b3a1ef0a0493dafa9a62917b7c97447d8a3df6b4a499d8
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.4.2.tgz
+    version: 1.4.2
+  - apiVersion: v2
+    appVersion: 2.8.4
+    created: "2022-11-10T10:46:30.313815859Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 775a254bee6633ee7629f149fc27419e9cc29883ad6ca06d161394f1c11c4aaf
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.4.1.tgz
+    version: 1.4.1
+  - apiVersion: v2
+    appVersion: 2.8.4
+    created: "2022-11-10T10:46:30.312393916Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: cbc4802535e32f2e0e8f7439f8c39460fe054600f824d055c2b03f232282126c
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.4.0.tgz
+    version: 1.4.0
+  - apiVersion: v2
+    appVersion: 2.8.4
+    created: "2022-11-10T10:46:30.311045775Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: a4ee3c547618a6fb40bf480aebb4cc97b307ef541121c9200f7c131296fe6ba9
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.3.0.tgz
+    version: 1.3.0
+  - apiVersion: v2
+    appVersion: 2.8.4
+    created: "2022-11-10T10:46:30.309522828Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 5a94eeccf3e6cf7d13336d3521ccd330b6bfa27e874d10f8d5d1c549c73fcb83
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.2.7.tgz
+    version: 1.2.7
+  - apiVersion: v2
+    appVersion: 2.8.3
+    created: "2022-11-10T10:46:30.307969281Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: c5d42785024e01b18c4a122bd641dd614e7718a78b598da0db0c7dc4e3b09503
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.2.6.tgz
+    version: 1.2.6
+  - apiVersion: v2
+    appVersion: 2.8.3
+    created: "2022-11-10T10:46:30.306388933Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 870f6dd66681a3484241fb439068c850b1c728521bc6ef16add3cbc92c1bd64f
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.2.5.tgz
+    version: 1.2.5
+  - apiVersion: v2
+    appVersion: 2.8.3
+    created: "2022-11-10T10:46:30.305049893Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 737b601c45e012a1b3498e945806279b87bc0d11709cca7b288896b267c2e1ad
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.2.4.tgz
+    version: 1.2.4
+  - apiVersion: v2
+    appVersion: 2.8.3
+    created: "2022-11-10T10:46:30.303701652Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: ac2afaa770c265a8bcabfa814912d3562c40e49a4debd0108dbb965c01c31590
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.2.3.tgz
+    version: 1.2.3
+  - apiVersion: v2
+    appVersion: 2.8.2
+    created: "2022-11-10T10:46:30.30267182Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: e08271280cd1db53303fc3f0aefe38693152f92a69b274ddc48e76732ff91fc9
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.2.2.tgz
+    version: 1.2.2
+  - apiVersion: v2
+    appVersion: 2.8.1
+    created: "2022-11-10T10:46:30.30165829Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 66563a90f76c2892e6a5ab0f10252e828ebe9cd04f8cf06c5121101ae6535b47
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.2.1.tgz
+    version: 1.2.1
+  - apiVersion: v2
+    appVersion: 2.8.0
+    created: "2022-11-10T10:46:30.300620858Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 08b8bd23975d138e4af6aa2d43ddd4055aef2460ec5697211e45823973b8256c
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.2.0.tgz
+    version: 1.2.0
+  - apiVersion: v2
+    appVersion: 2.7.3
+    created: "2022-11-10T10:46:30.299573626Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 9b1ebc380198aab43e78957f05af78acbfd06f3820f42586e385c876a47cc56b
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.1.4.tgz
+    version: 1.1.4
+  - apiVersion: v2
+    appVersion: 2.7.2
+    created: "2022-11-10T10:46:30.298355989Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 123e7a14e794cad66b36b8aec85992e2297ad74d2472a7543b62b7d6dd60baad
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.1.3.tgz
+    version: 1.1.3
+  - apiVersion: v2
+    appVersion: 2.7.1
+    created: "2022-11-10T10:46:30.297151053Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 80f5b0c2d6679a87c7ee2ecc61aeae240df2a53de27192ecac0fe0bfa10ae456
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.1.2.tgz
+    version: 1.1.2
+  - apiVersion: v2
+    appVersion: 2.7.0
+    created: "2022-11-10T10:46:30.295703309Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 331c78c6abd32879eb4c8a13917bd478c75f45e55c6d63122adbb85d198c285e
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.1.1.tgz
+    version: 1.1.1
+  - apiVersion: v2
+    appVersion: 2.7.0
+    created: "2022-11-10T10:46:30.294705979Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 3b1dfba434915b5561a7b97b1ebb83ef98f969ab9d10ad3c077dcc32ee32720b
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    appVersion: 2.6.5
+    created: "2022-11-10T10:46:30.293739149Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: c8ebd022cd18735812bb597e548439f9a937b1913df084cc8d69fbc2c60a1432
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.0.2.tgz
+    version: 1.0.2
+  - apiVersion: v2
+    appVersion: 2.6.4
+    created: "2022-11-10T10:46:30.292733719Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: ab2b11b042a2f9d6ba79f056c68456dcc4c082b939e841b961c40086d8abb058
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.0.1.tgz
+    version: 1.0.1
+  - apiVersion: v2
+    appVersion: 2.6.1
+    created: "2022-11-10T10:46:30.291744789Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 97a0a90b436497224b1eea10079f6315018b5304ea9f2ff31daac647085d5d2c
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    - name: kevinpollet
+    - name: ddtmachado
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-1.0.0.tgz
+    version: 1.0.0
+  - apiVersion: v2
+    appVersion: 2.6.1
+    created: "2022-11-10T10:46:30.290713357Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: fe592124bd25850de3820c4390aafebb9008a44faaced1d75f87d48b5d53a0cd
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.2.1.tgz
+    version: 0.2.1
+  - apiVersion: v2
+    appVersion: 2.6.0
+    created: "2022-11-10T10:46:30.289727027Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: c69885f2e468ff63fa616dba38f5258e44f8eee8b524cb802fcc2dd9506a40bc
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
+    appVersion: 2.5.8
+    created: "2022-11-10T10:46:30.279466416Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 1651fa1b8b211dda4c060344fee2f44482b578e8d1906c7f93a6b231381baa53
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.11.tgz
+    version: 0.1.11
+  - apiVersion: v2
+    appVersion: 2.5.7
+    created: "2022-11-10T10:46:30.278486786Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: b5e9b01fe0ca0961375b814277c8d8c09dfb76aecc577bdbd0f0bdb13205a9fc
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.10.tgz
+    version: 0.1.10
+  - apiVersion: v2
+    appVersion: 2.5.7
+    created: "2022-11-10T10:46:30.288729397Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: ebad9d65922942687c743189caba19c168625464e81099286f1c61718643af63
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.9.tgz
+    version: 0.1.9
+  - apiVersion: v2
+    appVersion: 2.5.6
+    created: "2022-11-10T10:46:30.287450958Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: fd2558c86a27198b7d3ff1342a990eb29a3dd43d86a0d676b132419dc53b6849
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.8.tgz
+    version: 0.1.8
+  - apiVersion: v2
+    appVersion: 2.5.6
+    created: "2022-11-10T10:46:30.285832609Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: c299ef17bb8099c5cab9075c72bdc2e041d8b4643a54a9bb0ec43e48e22e6af7
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 2.5.3
+    created: "2022-11-10T10:46:30.284663474Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 7ab4fa1b4d24d596d4b4fea8d3fccdc3d6ac918601f33288fd8787b7366b44a6
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
+    appVersion: 2.5.3
+    created: "2022-11-10T10:46:30.283737046Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 19e676f359569d36211106ab630f5fbed7f24f74ed3fc7e5a14460fe10c3b2ea
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 2.5.2
+    created: "2022-11-10T10:46:30.282837118Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 3c361346da9d1d8d994a0acac9ed7d228d7a11cc32e715da7447934a5bd66c35
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v2
+    appVersion: 2.5.1
+    created: "2022-11-10T10:46:30.28191289Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: e43fb1e2e4e4baa003ccfa3b8f24fc291ca84c8f4d6b4980ac574c0f9d7fb5cd
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 2.5.0
+    created: "2022-11-10T10:46:30.280418745Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: a696b098cbb855031d17a748f6869a0c3e14d498369102cd630e09c781bc38d6
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
+    appVersion: 2.5.0
+    created: "2022-11-10T10:46:30.277448555Z"
+    description: 'Traefik Enterprise is a unified cloud-native networking solution
+      that brings API management, ingress control, and Service Mesh all together in
+      one simple control plane. Traefik Enterprise eases microservices networking
+      complexity for developers and operations teams across the organization. '
+    digest: 36468a1696f4dbad38ecf1f91cdc376c4fb5522579e0c3d3085955c0fce713dd
+    home: https://traefik.io/traefik-enterprise/
+    keywords:
+    - traefikee
+    kubeVersion: '>= 1.14.0-0'
+    maintainers:
+    - name: charlie-haley
+    name: traefikee
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefikee/traefikee-0.1.1.tgz
+    version: 0.1.1
+generated: "2025-01-15T13:39:18.725877339Z"
+
