@@ -33,7 +33,7 @@ entries:
     # https://github.com/Phillip-007/testaanpassingtraefikhelm/tree/main/traefik-helm-chart
     type: application
     urls:
-    - https://github.com/Phillip-007/testaanpassingtraefikhelm/blob/main/zipfiles/traefik-32.1.0.tgz
+    - https://raw.githubusercontent.com/Phillip-007/testaanpassingtraefikhelm/refs/heads/main/zipfiles/traefik-32.1.0.tgz
     # https://traefik.github.io/charts/traefik/traefik-32.1.0.tgz
     version: 32.1.0
 generated: "2025-01-28T17:40:02.697841749+01:00"
