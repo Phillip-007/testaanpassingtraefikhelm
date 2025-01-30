@@ -23,7 +23,8 @@ maintainers:
 - name: jnoordsij
 name: traefik
 sources:
-- https://github.com/traefik/traefik
-- https://github.com/traefik/traefik-helm-chart
+- https://github.com/Phillip-007/testaanpassingtraefikhelm/tree/main/versie-32.1.1/traefik
+#- https://github.com/traefik/traefik
+#- https://github.com/traefik/traefik-helm-chart
 type: application
 version: 32.1.0

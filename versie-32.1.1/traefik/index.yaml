@@ -1,0 +1,127 @@
+apiVersion: v1
+entries:
+  traefik:
+  - annotations:
+      artifacthub.io/changes: "- \"fix: :bug: set disableIngressClassLookup until
+        3.1.4\"\n- \"feat(deps): update traefik docker tag to v3.1.5\"\n- \"feat(Traefik
+        Proxy): update rbac following v3.2 migration guide\"\n- \"chore(release):
+        \U0001F680 publish v32.1.0\"\n"
+    apiVersion: v2
+    appVersion: v3.1.5
+    created: "2024-10-04T09:55:34.829684667Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 1f06f7a0ee02427f4c35b5021d7ddbaeddb780b772cae411a0a84abf17733387
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik
+    sources:
+    - https://github.com/Phillip-007/testaanpassingtraefikhelm/tree/main/versie-32.1.1/traefik
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/Phillip-007/testaanpassingtraefikhelm/refs/heads/main/versie-32.1.1/zipfile/traefik-32.1.0.tgz
+    # https://traefik.github.io/charts/traefik/traefik-32.1.0.tgz
+    version: 32.1.0
+  traefik-crds:
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat(Traefik Hub): add OAS validateRequestMethodAndPath - CRDs update"
+        - "chore(release): publish v34.1.0 and CRDs v1.2.0"
+    apiVersion: v2
+    created: "2025-01-15T13:39:18.729991166Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: fc612c5b3311f88f95c954306c053f31cb2f079714539a8ebed60f129faae669
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik-crds
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-crds/traefik-crds-1.2.0.tgz
+    version: 1.2.0
+  - annotations:
+      artifacthub.io/changes: |
+        - "feat(CRDs): update CRDs for Traefik Proxy v3.3.x"
+        - "chore(release): publish CRDs v1.1.0"
+    apiVersion: v2
+    created: "2025-01-13T14:25:31.148828138Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: b8cf7da6634f5b77dac8810f5abc24a30f57d942f8d9172bbef9dc2e4bfcb88d
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik-crds
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-crds/traefik-crds-1.1.0.tgz
+    version: 1.1.0
+  - apiVersion: v2
+    created: "2025-01-10T10:55:48.397863936Z"
+    description: A Traefik based Kubernetes ingress controller
+    digest: 430cd03a4d754f0b074c8a3d9a4d7620d7ddb27b0e457d9ce101b2ef4863c4b7
+    home: https://traefik.io/
+    icon: https://raw.githubusercontent.com/traefik/traefik/v2.3/docs/content/assets/img/traefik.logo.png
+    keywords:
+    - traefik
+    - ingress
+    - networking
+    kubeVersion: '>=1.22.0-0'
+    maintainers:
+    - email: michel.loiseleur@traefik.io
+      name: mloiseleur
+    - email: charlie.haley@traefik.io
+      name: charlie-haley
+    - email: remi.buisson@traefik.io
+      name: darkweaver87
+    - name: jnoordsij
+    name: traefik-crds
+    sources:
+    - https://github.com/traefik/traefik
+    - https://github.com/traefik/traefik-helm-chart
+    type: application
+    urls:
+    - https://traefik.github.io/charts/traefik-crds/traefik-crds-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-01-30T08:50:46.311589562+01:00"
