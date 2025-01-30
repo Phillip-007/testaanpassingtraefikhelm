@@ -31,7 +31,7 @@ entries:
     - https://github.com/Phillip-007/testaanpassingtraefikhelm/tree/main/versie-32.1.0/traefik
     type: application
     urls:
-    - https://raw.githubusercontent.com/Phillip-007/testaanpassingtraefikhelm/blob/main/versie-32.1.0/zipfile/traefik-32.1.0.tgz
+    - https://raw.githubusercontent.com/Phillip-007/testaanpassingtraefikhelm/refs/heads/main/versie-32.1.0/zipfile/traefik-32.1.0.tgz
     # https://traefik.github.io/charts/traefik/traefik-32.1.0.tgz
     version: 32.1.0
   traefik-crds:
