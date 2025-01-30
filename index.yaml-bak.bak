@@ -33,7 +33,7 @@ entries:
     # urls:
     # - https://github.com/Phillip-007/testaanpassingtraefikhelm/blob/main/zipfiles/traefik-32.1.0.tgz
     # # https://traefik.github.io/charts/traefik/traefik-32.1.0.tgz
-    version: 32.1.0
+    version: 32.1.1
   traefik-crds:
   - annotations:
       artifacthub.io/changes: |

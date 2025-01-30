@@ -27,4 +27,4 @@ sources:
 #- https://github.com/traefik/traefik
 #- https://github.com/traefik/traefik-helm-chart
 type: application
-version: 32.1.0
+version: 32.1.1
